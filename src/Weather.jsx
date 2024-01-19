@@ -35,7 +35,7 @@ export default function Weather() {
             <h2>Temperature in celsius : {current.temp_c?current.temp_c:"Data not found"} C</h2>
             {/* <h2>Condition:{current.condition.text?current.condition.text:"Data not found"}</h2> */}
             <h2>Wind degree:{current.wind_degree?current.wind_degree:"Data not found"}</h2>
-            <h2>Cloud:{current.cloud?"Cloudy":"Not cloudy"}</h2>
+            <h2>Cloud:{!current.cloud?"Cloudy":"Not cloudy"}</h2>
             <h2>Humidity:{current.humidity?current.humidity:"Data not found"}</h2>
         </div>
       </div>):<h1>{`COULD NOT FOUND`}</h1>}
