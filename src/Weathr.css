@@ -1,0 +1,31 @@
+input{
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+button{
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: rgb(61, 172, 94);
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+.main-container{
+    grid-column: 2;
+}
+h1{
+    font-size: 50px;
+    color: rgb(44, 136, 8);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h2{
+    font-size: 30px;
+    color: rgb(5, 43, 4);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
