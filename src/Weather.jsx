@@ -13,18 +13,18 @@ export default function Weather() {
     }
     useEffect(()=>{
             func() 
-    },)
+    },[location])
     const submt=(e)=>{
         e.preventDefault();
         func()
-    }
+    } 
   return (
     <>
       <form className='search-box' onSubmit={submt}>
         <input text="" placeholder='Give your city name...' value={search} onChange={(e)=>setSearch(e.target.value)}></input>
         <button>SEARCH</button>
       </form>
-      {location? <div className='main-container'>
+      {location?( <div className='main-container'>
         <div className='location'>
             <h1>{location.name?location.name:`we could not find ${search}`}</h1>
             <h2>Country : {location.country?location.country:"Country not found"}</h2>
@@ -33,12 +33,12 @@ export default function Weather() {
         <div className='current'>
             <h2>Last Updated: {current.last_updated?current.last_updated:"Data not found"}</h2>
             <h2>Temperature in celsius : {current.temp_c?current.temp_c:"Data not found"} C</h2>
-            {/* <h2>Condition:{current.condition.text?current.condition.text:"Data not found"}</h2> */}
+            <h2>Condition:{current.condition.text?current.condition.text:"Data not found"}</h2>
             <h2>Wind degree:{current.wind_degree?current.wind_degree:"Data not found"}</h2>
             <h2>Cloud:{current.cloud?"Cloudy":"Not cloudy"}</h2>
             <h2>Humidity:{current.humidity?current.humidity:"Data not found"}</h2>
         </div>
-      </div>:<h1>{``}</h1>}
+      </div>):<h1>{`COULD NOT FOUND`}</h1>}
       
       
      
