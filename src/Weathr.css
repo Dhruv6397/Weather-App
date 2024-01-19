@@ -8,7 +8,7 @@ button{
     padding: 15px;
     border-radius: 15px;
     font-size: 20px;
-    background-color: rgb(61, 172, 94);
+    background-color: rgb(25, 111, 154);
     color: white;
 }
 button:hover{
@@ -20,12 +20,12 @@ button:hover{
 }
 h1{
     font-size: 50px;
-    color: rgb(44, 136, 8);
+    color: rgb(7, 75, 91);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 h2{
     font-size: 30px;
-    color: rgb(5, 43, 4);
+    color: rgb(4, 37, 43);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
