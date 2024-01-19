@@ -4,7 +4,6 @@ export default function Weather() {
     const [location,locationData ] = useState([]);
     const [current,setCurrent] = useState([]);
     const [search,setSearch] = useState('');
-    const [status,setStatus] = useState(false);
     const func= async()=>{
         let raw = await fetch(`http://api.weatherapi.com/v1/current.json?key=df227d2cf6664e879ca115948241901&q=${search}&aqi=yes`)
         let parsedData = await raw.json();
