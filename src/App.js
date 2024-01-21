@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='m-container'>
       <div className="App">
-          <h1>FIND YOUR CITY'S WEATHER STATUS</h1> */}
+          <h1>FIND YOUR CITY'S WEATHER STATUS</h1> 
           <Weather/> 
           
       </div>
