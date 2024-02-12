@@ -3,25 +3,36 @@ import './Weathr.css'
 export default function Weather() {
     const [location,locationData ] = useState([]);
     const [current,setCurrent] = useState([]);
-    const [search,setSearch] = useState('');
-    const func= async()=>{
-        let raw = await fetch(`http://api.weatherapi.com/v1/current.json?key=df227d2cf6664e879ca115948241901&q=${search}&aqi=yes`)
-        let parsedData = await raw.json();
-        setCurrent(parsedData.current)
-        locationData(parsedData.location)
-        
-    }
+    const [search,setSearch] = useState('bareilly');
+    const fetchData = async () => {
+      try {
+          const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=df227d2cf6664e879ca115948241901&q=${search}&aqi=yes`);
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          setCurrent(data.current);
+          locationData(data.location);
+      } catch (error) {
+          console.error('Error fetching data:', error);
+          locationData(null);
+          setCurrent(null);
+      }
+  };
+
     useEffect(()=>{
-            func() 
-    },[location])
-    const submt=(e)=>{
+      if(search){
+            fetchData() 
+      }
+    },[search])
+    const submit=(e)=>{
         e.preventDefault();
-        func()
+        fetchData()
     } 
   return (
     <>
-      <form className='search-box' onSubmit={submt}>
-        <input text="" placeholder='Give your city name...' value={search} onChange={(e)=>setSearch(e.target.value)}></input>
+      <form className='search-box' onSubmit={submit}>
+        <input text="" placeholder='Enter your city name...' value={search} onChange={(e)=>setSearch(e.target.value)}></input>
         <button>SEARCH</button>
       </form>
       {location && current?( <div className='main-container'>

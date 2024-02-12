@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Weather application created in react js
+
+## Sample images of project
+### 01
+![some network problem occured ](./src/assets/sc01.png "Landing page")
+
+### 02
+
+![some network problem occured ](./src/assets/sc02.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
