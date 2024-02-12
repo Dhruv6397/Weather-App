@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react'
-import './Weathr.css'
+import './Weather.css'
 export default function Weather() {
     const [location,locationData ] = useState([]);
     const [current,setCurrent] = useState([]);
@@ -44,7 +44,6 @@ export default function Weather() {
         <div className='current'>
             <h2>Last Updated: {current.last_updated?current.last_updated:"Data not found"}</h2>
             <h2>Temperature in celsius : {current.temp_c?current.temp_c:"Data not found"} C</h2>
-            {/* <h2>Condition:{current.condition.text?"Data not found":current.condition.text}</h2> */}
             <h2>Wind degree:{current.wind_degree?current.wind_degree:"Data not found"}</h2>
             <h2>Cloud:{!current.cloud?"Cloudy":"Not cloudy"}</h2>
             <h2>Humidity:{current.humidity?current.humidity:"Data not found"}</h2>
